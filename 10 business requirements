@@ -1,0 +1,29 @@
+1. User Registration 
+As a user, I want my account to be safe with unique username and password.
+
+2. User Login
+As a user, I want fields validation on my account.
+
+3. Account Management
+As a user, I want to be albe to change account informations.
+
+4. App Performance
+As a user, I want fluidity in the application, without interruptions and bugs.
+
+5. Data Security
+As a user, I expect personal data to be stored properly without being lost.
+
+6. User Friendly Interface
+As a user, I expect the interface to be user friendly.
+
+7. Remote Access
+As a user, I expect to be able to use the application from anywhere.
+
+8. Rating Option
+As a user, I want to be able to give stars to the application.
+
+9. Correct Informations
+As a user, I expect the information provided to be correct.
+
+10. Best Technologies
+As a user, I expect the application to use the best technologies
