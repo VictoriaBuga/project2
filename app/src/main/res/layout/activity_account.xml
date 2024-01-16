@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ctr_bg">
+    <!--    tools:context=".HomeActivity"-->
+
+
+    <com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout
+        android:id="@+id/circularRevealCoordinatorLayout"
+        android:layout_width="416dp"
+        android:layout_height="757dp"
+        android:background="@drawable/ctr_bg"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#00000000"
+            android:fitsSystemWindows="true">
+            <!--            android:theme="@style/AppTheme">-->
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ctr_bg"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/black"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_collapseMode="pin" />
+
+                <TextView
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="262dp"
+                    android:layout_height="57dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="60dp"
+                    android:ems="10"
+                    android:fontFamily="serif-monospace"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="34sp"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="serif-monospace"
+                    android:text="Hello"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="757dp"
+            android:background="@drawable/layout_round"
+            android:fitsSystemWindows="true"
+            app:layout_anchor="@+id/nestedScrollView"
+            app:layout_anchorGravity="center"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layout_constraintBottom_toBottomOf="@+id/circularRevealCoordinatorLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomNavigationView"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="757dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nestedScrollView">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_user"
+                    android:layout_width="256dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/black"
+                    app:cardBackgroundColor="#E1F7EA"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.164"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/textView_user"
+                        android:layout_width="100dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="35dp"
+                        android:clickable="true"
+                        android:fontFamily="serif-monospace"
+                        android:text="User"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_logout"
+                    android:layout_width="256dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="26dp"
+                    android:background="@color/black"
+                    app:cardBackgroundColor="#F7D8D8"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.844"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView_user">
+
+
+                    <TextView
+                        android:id="@+id/textView_logout"
+                        android:layout_width="110dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Logout"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_rateus"
+                    android:layout_width="256dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/black"
+                    app:cardBackgroundColor="#E1F7EA"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.163"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView_logout">
+
+
+                    <TextView
+                        android:id="@+id/textView_rateus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Rate Us"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="84dp"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="150dp"
+                        android:background="#00FFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/check"
+                        tools:srcCompat="@drawable/check2" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <!--<CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="352dp"
+                    android:layout_height="305dp"
+
+                    android:layout_marginStart="28dp"
+                    android:theme="@style/AppThemeBlue"
+                    app:layout_anchorGravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/MyBottomNavStyle"
+        android:layout_width="434dp"
+        android:layout_height="69dp"
+        android:background="@color/white"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/main_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

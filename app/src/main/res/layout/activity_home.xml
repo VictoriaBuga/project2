@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ctr_bg">
+    <!--    tools:context=".HomeActivity"-->
+
+
+    <com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout
+        android:id="@+id/circularRevealCoordinatorLayout"
+        android:layout_width="416dp"
+        android:layout_height="757dp"
+        android:background="@drawable/ctr_bg"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#00000000"
+            android:fitsSystemWindows="true">
+            <!--            android:theme="@style/AppTheme">-->
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ctr_bg"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/black"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_collapseMode="pin" />
+
+                <TextView
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="262dp"
+                    android:layout_height="57dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="60dp"
+                    android:ems="10"
+                    android:fontFamily="serif-monospace"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="34sp"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="serif-monospace"
+                    android:text="Hello"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="757dp"
+            android:background="@drawable/layout_round"
+            android:fitsSystemWindows="true"
+            app:layout_anchor="@+id/nestedScrollView"
+            app:layout_anchorGravity="center"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layout_constraintBottom_toBottomOf="@+id/circularRevealCoordinatorLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomNavigationView"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="757dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nestedScrollView">
+
+                <!--<androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="209dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="100dp"
+                    android:background="@color/black"
+                    app:cardBackgroundColor="#E1F7EA"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView1">
+
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#00000000"
+                        android:backgroundTint="#5A2020"
+                        android:clickable="true"
+                        android:fontFamily="serif-monospace"
+                        android:shadowColor="#6C0909"
+                        android:text="Let's get started!"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </androidx.cardview.widget.CardView>-->
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_water"
+                    android:layout_width="344dp"
+                    android:layout_height="127dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@color/black"
+                    app:cardBackgroundColor="#E1F7EA"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/textView_water"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Drink water"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_liters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="230dp"
+                        android:layout_marginTop="80dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="liters"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <SeekBar
+                        android:id="@+id/seekBar_water"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="184dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="70dp"
+                        android:max="10"
+                        android:progress="3" />
+
+                    <ImageView
+                        android:id="@+id/imageView_water"
+                        android:layout_width="40dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="240dp"
+                        android:layout_marginTop="6dp"
+                        app:srcCompat="@drawable/water_bottle" />
+
+                    <TextView
+                        android:id="@+id/textView_water_1"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView_water_10"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="10"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_sleep"
+                    android:layout_width="344dp"
+                    android:layout_height="127dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@color/black"
+                    app:cardBackgroundColor="#E1F7EA"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView_water">
+
+
+                    <TextView
+                        android:id="@+id/textView_sleep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Sleep"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="230dp"
+                        android:layout_marginTop="80dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="hours"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <SeekBar
+                        android:id="@+id/seekBar_sleep"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="70dp"
+                        android:max="15"
+                        android:progress="3" />
+
+                    <TextView
+                        android:id="@+id/textView_sleep_1"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView_sleep_15"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="15"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView_sleep"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="230dp"
+                        android:layout_marginTop="6dp"
+                        app:srcCompat="@drawable/sleeping" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_meals"
+                    android:layout_width="344dp"
+                    android:layout_height="127dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@color/black"
+                    app:cardBackgroundColor="#E1F7EA"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView_sleep">
+
+
+                    <TextView
+                        android:id="@+id/textView_meals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Meals"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_nummber_meals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="230dp"
+                        android:layout_marginTop="80dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="meals"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <SeekBar
+                        android:id="@+id/seekBar_meals"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="70dp"
+                        android:max="5"
+                        android:progress="3" />
+                    <TextView
+                        android:id="@+id/textView_meals_1"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView_meals_5"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="5"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView_meals"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="230dp"
+                        android:layout_marginTop="6dp"
+                        app:srcCompat="@drawable/meals" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_showers"
+                    android:layout_width="344dp"
+                    android:layout_height="127dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@color/black"
+                    app:cardBackgroundColor="#E1F7EA"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView_meals">
+
+
+                    <TextView
+                        android:id="@+id/textView_showers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Showers"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_nummber_showers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="230dp"
+                        android:layout_marginTop="80dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="showers"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <SeekBar
+                        android:id="@+id/seekBar_showers"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="70dp"
+                        android:max="5"
+                        android:progress="3" />
+
+                    <TextView
+                        android:id="@+id/textView_shower_1"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView_shower_5"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="5"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView_showers"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="230dp"
+                        android:layout_marginTop="6dp"
+                        app:srcCompat="@drawable/showers" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_snacks"
+                    android:layout_width="344dp"
+                    android:layout_height="127dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@color/black"
+                    app:cardBackgroundColor="#E1F7EA"
+                    app:cardCornerRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView_showers">
+
+
+                    <TextView
+                        android:id="@+id/textView_snacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="Snacks"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_number_snacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="230dp"
+                        android:layout_marginTop="80dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="snacks"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_snacks_1"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView_snacks_10"
+                        android:layout_width="33dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="serif-monospace"
+                        android:text="10"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar_snacks"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="70dp"
+                        android:max="10"
+                        android:progress="3" />
+
+                    <ImageView
+                        android:id="@+id/imageView_snacks"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="230dp"
+                        android:layout_marginTop="6dp"
+                        app:srcCompat="@drawable/snacks" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <ImageButton
+                    android:id="@+id/imageButton_save"
+                    android:layout_width="56dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/save"
+                    android:scaleType="fitStart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <!--<CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="352dp"
+                    android:layout_height="305dp"
+
+                    android:layout_marginStart="28dp"
+                    android:theme="@style/AppThemeBlue"
+                    app:layout_anchorGravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/MyBottomNavStyle"
+        android:layout_width="434dp"
+        android:layout_height="69dp"
+        android:background="@color/white"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/main_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
